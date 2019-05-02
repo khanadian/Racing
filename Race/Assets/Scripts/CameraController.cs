@@ -15,11 +15,11 @@ public class CameraController : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0, turnSpeed * Time.deltaTime, 0);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(0, -turnSpeed * Time.deltaTime, 0);
         }

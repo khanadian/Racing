@@ -3,13 +3,13 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject camera;
-    Rigidbody rigidbody;
+    public GameObject cam;
+    Rigidbody rb;
     public float speed;
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -22,26 +22,19 @@ public class PlayerController : MonoBehaviour
 
     void MoveCharacter(float horizontal,float vertical)
     {
-        //movement.Set(horizontal, 0, vertical);
-        //if (horizontal != 0 || vertical != 0)
-        //{
-        //   rigidbody.MoveRotation(Quaternion.LookRotation(movement));
-        //}
-        //movement = movement.normalized * movementSpeed * Time.deltaTime;
-        //rigidbody.MovePosition(transform.position + movement);
         if (Input.GetKey(KeyCode.W))
         {
-            Vector3 direction = (rigidbody.transform.position - camera.transform.position).normalized;
+            Vector3 direction = (rb.transform.position - cam.transform.position).normalized;
             direction.y = 0.0f;
             direction.Scale(new Vector3(speed, speed, speed));
-            rigidbody.AddForce(direction);
+            rb.AddForce(direction);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            Vector3 direction = (camera.transform.position - rigidbody.transform.position).normalized;
+            Vector3 direction = (cam.transform.position - rb.transform.position).normalized;
             direction.y = 0.0f;
             direction.Scale(new Vector3(speed, speed, speed));
-            rigidbody.AddForce(direction);
+            rb.AddForce(direction);
         }
 
     }

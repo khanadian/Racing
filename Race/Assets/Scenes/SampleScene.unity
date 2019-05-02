@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a203837df21934ca6a83bd7543c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 534669902}
+  cam: {fileID: 534669902}
   speed: 10
 --- !u!54 &1894742675
 Rigidbody:
@@ -1035,7 +1035,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 02702f462dd69664bafcfd528705c259, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
